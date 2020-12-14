@@ -76,30 +76,31 @@ function isLeapYear(date) {
  *    Date(2000,1,1,10,0,0),  Date(2000,1,1,10,0,0,250)     => "00:00:00.250"
  *    Date(2000,1,1,10,0,0),  Date(2000,1,1,15,20,10,453)   => "05:20:10.453"
  */
-function timeSpanToString(startDate, endDate) {
-  const timeSpan = new Date(endDate - startDate);
-  function formatIndication(number) {
-    if (number < 10) {
-      return `0${number}`;
-    }
-    return number;
-  }
-  function formatMs(number) {
-    if (number < 10) {
-      return `00${number}`;
-    }
-    if (number < 100) {
-      return `0${number}`;
-    }
-    return number;
-  }
+function timeSpanToString(/* startDate, endDate */) {
+  // const timeSpan = new Date(endDate - startDate);
+  // function formatIndication(number) {
+  //   if (number < 10) {
+  //     return `0${number}`;
+  //   }
+  //   return number;
+  // }
+  // function formatMs(number) {
+  //   if (number < 10) {
+  //     return `00${number}`;
+  //   }
+  //   if (number < 100) {
+  //     return `0${number}`;
+  //   }
+  //   return number;
+  // }
 
-  const h = formatIndication(timeSpan.getUTCHours());
-  const m = formatIndication(timeSpan.getUTCMinutes());
-  const s = formatIndication(timeSpan.getUTCSeconds());
-  const ms = formatMs(timeSpan.getUTCMilliseconds());
+  // const h = formatIndication(timeSpan.getUTCHours());
+  // const m = formatIndication(timeSpan.getUTCMinutes());
+  // const s = formatIndication(timeSpan.getUTCSeconds());
+  // const ms = formatMs(timeSpan.getUTCMilliseconds());
 
-  return `${h}:${m}:${s}.${ms}`;
+  // return `${h}:${m}:${s}.${ms}`;
+  throw new Error('Not implemented');
 }
 
 
@@ -119,18 +120,19 @@ function timeSpanToString(startDate, endDate) {
  *    Date.UTC(2016,3,5,18, 0) => Math.PI
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
-function angleBetweenClockHands(date) {
-  const newd = new Date(date);
-  let h = newd.getUTCHours();
-  if (h > 12) {
-    h -= 12;
-  }
-  const m = newd.getUTCMinutes();
-  let angle = 0.5 * ((60 * h) - (m * 11));
-  if (angle > 180) {
-    angle = 360 - angle;
-  }
-  return Math.abs((angle * Math.PI) / 180);
+function angleBetweenClockHands(/* date */) {
+  // const newd = new Date(date);
+  // let h = newd.getUTCHours();
+  // if (h > 12) {
+  //   h -= 12;
+  // }
+  // const m = newd.getUTCMinutes();
+  // let angle = 0.5 * ((60 * h) - (m * 11));
+  // if (angle > 180) {
+  //   angle = 360 - angle;
+  // }
+  // return Math.abs((angle * Math.PI) / 180);
+  throw new Error('Not implemented');
 }
 
 
